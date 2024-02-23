@@ -1,2 +1,2 @@
 # GoCliWithFlags
-Learn be=asics of building GO cli with flag module
+Learn basics of building GO cli with flag module
