@@ -155,8 +155,8 @@ func processLine(headers []string, datalist []string) (map[string]string, error)
 }
 
 func writeJSONFile(csvPath string, writerChannel <-chan map[string]string, done chan<- bool, pretty bool) {
-	writeString := createStringWriter(csvPath) // Instanciating a JSON writer function
-	jsonFunc, breakLine := getJSONFunc(pretty) // Instanciating the JSON parse function and the breakline character
+	writeString := createStringWriter(csvPath) // Instantiating a JSON writer function
+	jsonFunc, breakLine := getJSONFunc(pretty) // Instantiating the JSON parse function and the breakline character
 	// Log for informing
 	fmt.Println("Writing JSON file...")
 	// Writing the first character of our JSON file. We always start with a "[" since we always generate array of record
@@ -219,5 +219,5 @@ func getJSONFunc(pretty bool) (func(map[string]string) string, string) {
 		}
 	}
 
-	return jsonFunc, breakLine // Returning everythinbg
+	return jsonFunc, breakLine // Returning everything
 }
